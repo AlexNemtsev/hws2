@@ -4,10 +4,15 @@
 
 .hw {
     border: 1px solid #D9D9D9;
-    padding: 0 70px;
+    padding: 24px 70px;
 }
 
 .hwTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: var(--header_height);
     font-weight: 600;
     font-size: 22px;
+    padding: 10px 0 10px 70px;
 }
