@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
-import SuperEditableSpan from './common/c4-SuperEditableSpan/SuperEditableSpan'
-import { restoreState, saveState } from './localStorage/localStorage'
-import s2 from '../../s1-main/App.module.css'
-import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
-import s from './HW6.module.css'
+import React, { useState } from 'react';
+import SuperEditableSpan from './common/c4-SuperEditableSpan/SuperEditableSpan';
+import { restoreState, saveState } from './localStorage/localStorage';
+import s2 from '../../s1-main/App.module.css';
+import SuperButton from '../hw04/common/c2-SuperButton/SuperButton';
+import s from './HW6.module.css';
 
 /*
  * 1 - в файле SuperEditableSpan.tsx дописать логику функций onEnterCallback, onBlurCallback, onDoubleClickCallBack
@@ -12,15 +12,17 @@ import s from './HW6.module.css'
  */
 
 const HW6 = () => {
-    const [value, setValue] = useState<string>('')
+    const [value, setValue] = useState<string>('');
 
     const save = () => {
-        saveState<string>('hw6-editable-span-value', value)
-    }
-    const restore = () => {
-        // делают студенты
+        saveState<string>('hw6-editable-span-value', value);
+    };
 
-    }
+    const restore = () => {
+        const newState = restoreState<string>('hw6-editable-span-value', 'enter text...');
+
+        setValue(newState);
+    };
 
     return (
         <div id={'hw6'}>
@@ -44,17 +46,13 @@ const HW6 = () => {
                     <SuperButton id={'hw6-save'} onClick={save}>
                         Save to ls
                     </SuperButton>
-                    <SuperButton
-                        id={'hw6-restore'}
-                        onClick={restore}
-                        xType={'secondary'}
-                    >
+                    <SuperButton id={'hw6-restore'} onClick={restore} xType={'secondary'}>
                         Get from ls
                     </SuperButton>
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default HW6
+export default HW6;

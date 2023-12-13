@@ -9,18 +9,32 @@
     gap: 12px;
 }
 
-.error {}
+.error {
+    color: #C00;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    outline: none;
+}
 
 .input {
     height: 36px;
     border-radius: 5px;
+    padding: 8px 12px;
+    border: 1px solid #D1D1D1;
 }
 
-.input:focus {}
+.input:focus {
+    outline: none;
+}
 
 .errorInput {
-    border-color: #CC0000;
+    border: 1px solid #CC0000;
     outline: none;
+    height: 36px;
+    padding: 8px 12px;
+    border-radius: 5px;
 }
 
 .button {
@@ -29,7 +43,7 @@
     background: #06C;
     border-radius: 3px;
     color: white;
-
+    border: none;
 }
 
 .button:focus {}
@@ -48,4 +62,9 @@
     line-height: normal;
 }
 
-.greeting {}
+.greeting {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
