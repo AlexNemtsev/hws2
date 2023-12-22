@@ -1,9 +1,10 @@
 .radio {
+    margin-right: 11px;
+    accent-color: black;
 }
 
 .radio::before {
 }
-
 
 .radio:checked::before {
 }
@@ -12,4 +13,7 @@
 }
 
 .options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
